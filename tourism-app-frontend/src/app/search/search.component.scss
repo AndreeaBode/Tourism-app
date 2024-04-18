@@ -1,0 +1,106 @@
+.background {
+    position: relative;
+    background-image: url('https://wallpapers.com/images/featured/maldives-23wyvlaqa7aydqny.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 93.5vh;
+    padding-top: 50px;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-button {
+    background-color: #67adf9; 
+    color: white; 
+    border: none;
+    border-radius: 4px; 
+    padding: 8px; 
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3; 
+  }
+  
+  .search-icon {
+    margin-left: auto; 
+  }
+  
+  
+.components {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 30px;
+    margin-top: 5%;
+}
+
+.components mat-form-field {
+    width: 50%; 
+}
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2%;
+    margin-left: 50px;
+    margin-right:50px;
+  }
+  
+  .destination-box {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .destination-square {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .destination-image {
+    width: 340px; 
+    height: 200px; 
+  }
+  
+  
+  .destination-details {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .destination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .destination-price {
+    margin: 0;
+  }
+  
+  .destination-details h2 {
+    margin-top: 0;
+  }
+  
+  .destination-details p {
+    margin: 5px 0;
+  }
+  
+  .location-icon {
+    color: black;
+  }
+  
+  .paginator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; 
+  }
+  

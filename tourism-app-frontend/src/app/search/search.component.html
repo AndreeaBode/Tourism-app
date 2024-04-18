@@ -1,0 +1,30 @@
+<div class="background">
+    <div class="components">
+        <mat-form-field class="search-field">
+          <mat-label>Caută destinații</mat-label>
+          <input matInput type="text" placeholder="Introdu destinația" [(ngModel)]="searchQuery">
+          <button mat-icon-button class="search-button" (click)="search(searchQuery)">
+              <mat-icon class="search-icon">search</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      
+
+    <div class="destinations">
+        <div *ngFor="let destination of displayedDestinations" class="destination-box">
+          <div class="destination-square">
+            <img [src]="destination.image_url" [alt]="destination.name" class="destination-image">
+            <div class="destination-details">
+              <div class="destination-header">
+                <h2>{{ destination.name }}</h2>
+                <p class="destination-price">{{ destination.price }}</p>
+              </div>
+              <p><strong>Description:</strong> {{ destination.description }}</p>
+              <p><i class="fas fa-map-marker-alt" style="color: black;"></i> {{ destination.location }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  

@@ -1,0 +1,106 @@
+.background {
+    background-image: url('https://res.klook.com/image/upload/Mobile/City/szhx3ytpgfnhpbmsngk0.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 93.3vh;
+  }
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2%;
+    margin-left: 50px;
+    margin-right:50px;
+  }
+  
+  .destination-box {
+    flex-basis: calc(25% - 20px);
+    margin-top:100px;
+    margin-bottom: 20px;
+  }
+  
+  .destination-square {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .destination-image {
+    width: 340px; 
+    height: 200px; 
+  }
+  
+  
+  .destination-details {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .destination-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .destination-price {
+    margin: 0;
+  }
+  
+  .destination-details h2 {
+    margin-top: 0;
+  }
+  
+  .destination-details p {
+    margin: 5px 0;
+  }
+  
+  .location-icon {
+    color: black;
+  }
+  
+  .paginator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; 
+  }
+  
+  .buton-add {
+    margin-bottom: 35px; 
+    padding: 10px 20px;
+    margin-top:25px;
+    margin-left:45%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button {
+    margin-top:15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 12px;
+  }
+.btn-edit {
+
+  color: rgb(6, 6, 6);
+  }
+  
+  .btn-delete {
+  color: rgb(0, 0, 0);
+  }
+  

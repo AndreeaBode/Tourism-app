@@ -1,0 +1,95 @@
+.background {
+  background-image: url('https://res.klook.com/image/upload/Mobile/City/szhx3ytpgfnhpbmsngk0.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 93.3vh;
+}
+
+.picker{
+  padding-top:45px;
+  padding-left: 40%;
+}
+
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 6%;
+  margin-left: 50px;
+  margin-right:50px;
+}
+
+.destination-box {
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+
+.destination-square {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.destination-image {
+  width: 340px; 
+  height: 200px; 
+}
+
+
+.destination-details {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.destination-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.destination-price {
+  margin: 0;
+}
+
+.destination-details h2 {
+  margin-top: 0;
+}
+
+.destination-details p {
+  margin: 5px 0;
+}
+
+.location-icon {
+  color: black;
+}
+
+.paginator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+button.reserve {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+button.view-reservations {
+  background-color: #008CBA; 
+  color: white;
+}
+

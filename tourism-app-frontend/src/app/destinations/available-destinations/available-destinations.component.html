@@ -1,0 +1,37 @@
+<div class="background">
+    <div class="picker">
+      <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" [(ngModel)]="selectedStartDate">
+          <input matEndDate placeholder="End date" [(ngModel)]="selectedEndDate">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+      <button mat-button color="primary" (click)="checkAvailability()">Check Availability</button>    
+    </div>
+    <div class="destinations">
+      <div *ngFor="let destination of displayedDestinations" class="destination-box">
+        <div class="destination-square">
+          <img [src]="destination.image_url" [alt]="destination.name" class="destination-image">
+          <div class="destination-details">
+            <div class="destination-header">
+              <h2>{{ destination.name }}</h2>
+              <p class="destination-price">{{ destination.price }}</p>
+            </div>
+            <p><strong>Description:</strong> {{ destination.description }}</p>
+            <p><i class="fas fa-map-marker-alt" style="color: black;"></i> {{ destination.location }}</p>
+            <button (click)="reserve(destination.id)">Reserve</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="paginator">
+    <mat-paginator [length]="destinations.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+      (page)="onPageChange($event)"></mat-paginator>
+  </div>
+  

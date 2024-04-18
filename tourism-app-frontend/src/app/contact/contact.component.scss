@@ -1,0 +1,63 @@
+.contact{
+    width: 400px; 
+    padding-right: 40%;
+}
+
+.contact-form {
+    margin: 20px auto;
+    width: 500px; 
+   
+    padding: 20px;
+   // padding-right: 550px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      mat-form-field {
+        width: 100%;
+        margin-bottom: 20px;
+  
+        input,
+        textarea {
+          width: 100%;
+        }
+      }
+  
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .contact-container {
+    display: flex;
+    position: relative; /* Necesar pentru a poziționa textul relativ la imagine */
+    background-image: url('https://wallpapers.com/images/featured/maldives-23wyvlaqa7aydqny.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 93.5vh;
+  }
+  
+  .contact-info {
+    padding: 20px;
+    //color: #ffffff;
+    font-size: 18px;
+    flex: 1;
+  }
+
+  h3 {
+    font-size: 25px; 
+  }
+  
+  .contact-form {
+    flex: 1;
+  }
+  

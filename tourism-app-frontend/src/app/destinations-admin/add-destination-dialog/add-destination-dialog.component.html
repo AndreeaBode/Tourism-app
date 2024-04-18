@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Add Destination</h2>
+<div mat-dialog-content>
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <input matInput type="text" [(ngModel)]="destination.location" name="location" required>
+  </div>
+  <div class="form-group">
+    <label for="pricePerNight">Price per night:</label>
+    <input matInput type="number" [(ngModel)]="destination.price_per_night" name="pricePerNight" required>
+  </div>
+  <div class="form-group">
+    <label for="availableSeats">Available seats:</label>
+    <input matInput type="number" [(ngModel)]="destination.available_seats" name="availableSeats" required>
+  </div>
+  <div class="form-group">
+    <label for="offerPercentage">Offer percentage:</label>
+    <input matInput type="number" [(ngModel)]="destination.offer_percentage" name="offerPercentage" min="0" max="100" required>
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">URL imagine:</label>
+    <input type="text" class="form-control" [(ngModel)]="destination.imageUrl" name="imageUrl">
+  </div>
+</div>
+<mat-dialog-actions>
+  <button mat-button (click)="save()" class="btn btn-sm btn-add mr-2">Add</button>
+  <button mat-button mat-dialog-close class="btn btn-sm btn-cancel">Cancel</button>
+</mat-dialog-actions>

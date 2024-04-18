@@ -1,0 +1,56 @@
+.background {
+    background-image: url('https://wallpapers.com/images/featured/maldives-23wyvlaqa7aydqny.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 93.3vh;
+    position: relative; /* Adăugăm această linie pentru a face containerul background poziționat relativ */
+  }
+  
+  .box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute; /* Facem ca box-ul să fie poziționat absolut în interiorul containerului background */
+    top: 50%; /* Plasăm box-ul la jumătatea înălțimii containerului background */
+    left: 50%; /* Plasăm box-ul la jumătatea lățimii containerului background */
+    transform: translate(-50%, -50%); /* Aducem box-ul înapoi la poziția corectă */
+  }
+  
+  .picker {
+    padding-top: 45px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+  }
+  
+  .picker {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 10%;
+  }
+  
+  button.check-availability {
+    background-color: #008CBA;
+    margin-left: 10%;
+  }
+  
+  p {
+    margin-left: 10%;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top:15px;
+    font-size: 18px;
+  }
+  

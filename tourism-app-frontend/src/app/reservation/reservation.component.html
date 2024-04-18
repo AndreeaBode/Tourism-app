@@ -1,0 +1,24 @@
+<div class = "background">
+    <div class="box">
+    <h2>Make a Reservation</h2>
+    <div class="picker">
+        <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+                <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>        
+    </div>
+      
+    <button class="check-availability" (click)="checkAvailability()">Check Availability</button>
+    <div *ngIf="totalCost !== null">
+      <p>Total Cost: {{ totalCost }}</p>
+      <div *ngIf="showMakeReservationButton">
+        <button (click)="makeReservation()">Make Reservation</button>
+      </div>    
+    </div>
+</div>
+</div>

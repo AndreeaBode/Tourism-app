@@ -1,0 +1,30 @@
+<nav>
+  <ul>  
+    <li>
+      <ng-container *ngIf="authService.isLoggedIn(); else loggedOutTemplate">
+        <button (click)="onLogout()" class="nav-link btn-style">Logout</button>
+      </ng-container>
+      <ng-template #loggedOutTemplate>
+        <a routerLink="/login" class="nav-link">Login</a>
+      </ng-template>
+    </li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    <li><a routerLink="/search" routerLinkActive="active">Search</a></li>
+    <li *ngIf="authService.userRole() === 'agent'">
+      <li><a routerLink="/destionations-admin" routerLinkActive="active">Admin</a>
+    </li>
+        <li>
+      <div class="dropdown">
+        <button class="dropbtn">Destinations
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a routerLink="/destinations" class="nav-link">All</a>
+          <a routerLink="/destinations/offers" class="nav-link">Offers</a> 
+          <a routerLink="/available-destinations" class="nav-link">Available</a> 
+        </div>
+      </div>
+    </li>
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+  </ul>
+</nav>

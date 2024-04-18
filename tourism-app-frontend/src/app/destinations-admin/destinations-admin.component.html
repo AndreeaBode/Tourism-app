@@ -1,0 +1,34 @@
+<div class=background>
+  <div class="container">
+
+    <div class="destinations">
+      <div class="list-group-item" *ngFor="let destination of paginatedDestinations" class="destination-box">
+        <div class="destination-square">
+          <img *ngIf="destination.imageUrl" [src]="destination.imageUrl" alt="Imagine destinație"
+            class="destination-image">
+          <div class="destination-details">
+            <div class="destination-header">
+              <span><strong>Location:</strong> {{ destination.location }}</span>
+              <span class="ml-2"><strong>Price/night:</strong> {{ destination.price_per_night }}</span>
+              <span class="ml-2"><strong>Available seats:</strong> {{ destination.available_seats }}</span>
+              <span class="ml-2"><strong>Offer percentage:</strong> {{ destination.offer_percentage }}</span>
+              <span class="ml-2"><strong>Price with offer:</strong> {{ destination.offer_price }}</span>
+            </div>            
+            <div class="mt-2">
+              <button class="btn btn-sm btn-delete mr-2" (click)="deleteDestination(destination.id)">Șterge</button>
+              <button class="btn btn-sm btn-edit" (click)="showEditForm(destination)">Editează</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="buton-add" (click)="showAddForm()">Adaugă Destinație</button>
+    <!-- Paginator -->
+    <div class="paginator">
+      <mat-paginator [length]="destinations.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+        (page)="onPageChange($event)"></mat-paginator>
+    </div>
+
+  </div>
+</div>

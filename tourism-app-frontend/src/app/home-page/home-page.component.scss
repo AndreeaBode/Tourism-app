@@ -1,0 +1,29 @@
+
+.background {
+    position: relative; 
+    background-image: url('https://wallpapers.com/images/featured/maldives-23wyvlaqa7aydqny.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 93.5vh;
+  }
+  
+.content {
+    position: absolute;
+    top: 22.5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+
+  h1 {
+    font-size: 40px; 
+  }
+  
+  p {
+    font-size: 25px; 
+  }
+  
+  

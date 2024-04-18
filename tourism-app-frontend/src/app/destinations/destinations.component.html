@@ -1,0 +1,25 @@
+<div class="background">
+  <div class="destinations">
+    <div *ngFor="let destination of displayedDestinations" class="destination-box">
+      <div class="destination-square">
+        <img [src]="destination.image_url" [alt]="destination.name" class="destination-image">
+        <div class="destination-details">
+          <div class="destination-header">
+            <h2>{{ destination.name }}</h2>
+            <p class="destination-price">{{ destination.price }}</p>
+          </div>
+          <p><strong>Description:</strong> {{ destination.description }}</p>
+          <p><i class="fas fa-map-marker-alt" style="color: black;"></i> {{ destination.location }}</p>
+          <button (click)="reserve(destination.id)">Reserve</button>
+          <button *ngIf="userRole === 'agent'" (click)="viewReservations(destination)">Vizualizare Rezervări</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="paginator">
+  <mat-paginator [length]="getDestinationsToShow().length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+    (page)="onPageChange($event)"></mat-paginator>
+</div>
